@@ -9,3 +9,22 @@ function esercizio1(string) {
   return string + " bootcamp";
 }
 esercizio1("ecco la stringa iniziale + ");
+
+// Esercizio 2
+
+// - scrivere un oggetto col vostro nome che vi identifichi in proprietà (nome, cognome, ecc...) e per metodi (es. possono anche essere semplici console.log di voi che eseguite un hobby)
+
+const tim = {
+  name: "tim",
+  surname: "crocodile",
+  age: 99,
+  tifoso: si,
+  calcio: function () {
+    console.log("amo addentare palle da calcio!");
+  },
+  dieta: function () {
+    console.log(
+      "sono vegano.. perchè mangio solo umani che lo sono a sua volta"
+    );
+  },
+};
