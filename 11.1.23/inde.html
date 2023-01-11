@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./esercizio2.js" type="module"></script>
+    <title>Document</title>
+  </head>
+  <!-- ## Esercizio 1
+
+  Creare una singola card tutto in statico (via HTML), inserire gli elementi a piacere, come immagini, testo o titoli, indispensabile pero aggiungere un button con una X come testo.
+  
+  Aggiungere un evento al cui click del mouse sulla class intera:
+  
+  - Cambi il colore del testo di tutta la card
+  
+  Aggiungere un secondo evento al cui click del mouse sul pulsante con la X - Elimini la card stessa -->
+
+  <body>
+    <div class="card" id="carta">
+      <img src="https://picsum.photos/200/300" alt="John" style="width: 100%" />
+      <h1>LiLlo</h1>
+      <p class="title">CEO & Founder</p>
+      <p id="descrizione">TorPignattara</p>
+
+      <p><button id="bottone">X</button></p>
+    </div>
+    <section class="quote-list"></section>
+    <section class="author-list"></section>
+    <script>
+      document.getElementById("carta").onclick = function () {
+        document.getElementById("descrizione").style.color = "green";
+      };
+      const bottone = document.getElementById("bottone");
+      bottone.addEventListener("click", () => {
+        carta.remove();
+      });
+    </script>
+  </body>
+</html>
