@@ -1,0 +1,59 @@
+.beppe {
+  color: purple;
+}
+.container {
+  background: #ff6676;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+form {
+  display: flex;
+  width: 100%;
+}
+
+.textInput {
+  width: 100%;
+  border: none;
+  padding: 14px;
+}
+
+#add {
+  width: 30%;
+  cursor: pointer;
+  background: #2c45a3;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+ul#lists {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  list-style: none;
+}
+
+ul#lists li {
+  padding: 12px;
+  background: white;
+  border: 1px solid #2c45a3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: #ff6676;
+  color: white;
+}
