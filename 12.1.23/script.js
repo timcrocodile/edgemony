@@ -18,7 +18,7 @@ import { todos } from "./mock.js";
 
 // terzo punto
 
-const filteredid = todos.filter((todo) => todo.id.length >= 4);
+const filteredid = todos.filter((todo) => todo.id >= 4);
 console.log(filteredid);
 
 //non riesco a capire perchè mi da un array vuota, forse non interpreta bene il numero 4 la funzione che ho scritto ?
