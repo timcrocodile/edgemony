@@ -1,0 +1,54 @@
+.foto {
+  display: flex;
+  gap: 10px;
+}
+
+.foto2 {
+  display: flex;
+  width: 500px;
+  height: 300px;
+
+  border-radius: 30px;
+}
+
+.bottoni {
+  display: flex;
+  gap: 10px;
+  margin-left: 720px;
+  margin-top: 10px;
+}
+
+.frase {
+  font-size: larger;
+  font-family: fantasy;
+  background-color: brown;
+  padding-left: 350px;
+  margin-top: 300px;
+}
+
+.identifiers {
+  padding-left: 280px;
+
+  font-family: fantasy;
+  background-color: brown;
+}
+
+.center-img {
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+}
+
+.small-img {
+  width: 30%;
+  height: 30%;
+  margin-bottom: 100px;
+}
+
+.risultatoclick img {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
