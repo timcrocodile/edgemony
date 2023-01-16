@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+}
+
+.productList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 2px 2px 8px #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.price {
+  color: blueviolet;
+}
