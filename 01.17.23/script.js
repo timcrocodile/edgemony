@@ -14,6 +14,8 @@ const productsList = document.querySelector(".products");
 const cart = [];
 // const loaderElement = document.querySelector(".loader");
 
+// const rimuoviBtn = document.querySelector(".rimuovi");
+
 btn1.addEventListener("click", () => {
   img1.classList.add("show");
   img2.classList.remove("show");
@@ -82,9 +84,9 @@ const cardCreator = (item) => {
   addBtn.textContent = "aggiungi alla sacca";
 
   addBtn.addEventListener("click", () => {
-    alert("sciccherria aggiunta al acrrello");
-    cart.push(item);
-    cartCreation();
+    // alert("sciccherria aggiunta al acrrello");
+    // cart.push(item);
+    cartPopulator(item);
   });
 
   cardEl.append(imgEl, h1El, priceEl, descEl, addBtn);
@@ -93,9 +95,47 @@ const cardCreator = (item) => {
 
 const cartCreation = () => {
   tendina.innerHTML = "";
-  cart.forEach((item) => {
-    const cartEl = document.createElement("p");
-    cartEl.textContent = item.title;
+  cart.forEach((item, index) => {
+    const cartEl = document.createElement("div");
+    // const rimuoviBtn = document.createElement("button");
+    cartEl.className = "cartRow";
+    cartEl.innerHTML = `<p>Q.ty: ${item.qty}</p><p>${item.title}</p><p>${item.price}</p>`;
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "x";
+    deleteBtn.addEventListener("click", () => {
+      cartEl.remove();
+      cart.splice(index, 1);
+    });
+    cartEl.append(deleteBtn);
     tendina.appendChild(cartEl);
   });
+};
+
+const cartPopulator = (item) => {
+  const newObj = {
+    id: item.id,
+    title: item.title,
+    price: item.price,
+    qty: 1,
+  };
+  const search = cart.filter((element) => {
+    if (element.id === newObj.id) {
+      element.qty++;
+      return element;
+    }
+  });
+
+  if (search.length === 0) {
+    cart.push(newObj);
+  }
+
+  //  if (cart.length === 0 ) {
+  //   cart.push(newObj);
+  //  }
+
+  // console.log("elemento trovato", ricerca);
+
+  // cart.push(newObj);
+  console.log(cart);
+  cartCreation();
 };
