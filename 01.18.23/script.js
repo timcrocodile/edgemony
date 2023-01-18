@@ -1,3 +1,5 @@
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmdssmmsmmsmsmsmmsms
+
 const heroEl = document.querySelector(".hero");
 
 const btn1 = document.querySelector("#btn-1");
