@@ -78,7 +78,7 @@ const cardCreator = (item) => {
 
   const descEl = document.createElement("p");
   descEl.className = "description";
-  //   descEl.textContent = item.description;
+  descEl.textContent = item.description;
 
   const addBtn = document.createElement("button");
   addBtn.textContent = "Aggiungi al Carrello";
@@ -93,11 +93,11 @@ const cardCreator = (item) => {
 
 const cartCreation = () => {
   // PER QUANTITA
-  // let cartTotal = 0;
-  // cart.forEach(item => {
-  //   cartTotal = cartTotal + item.qty;
-  // });
-  // pallino.textContent = cartTotal;
+  let cartTotal = 0;
+  cart.forEach((item) => {
+    cartTotal = cartTotal + item.qty;
+  });
+  pallino.textContent = cartTotal;
   //
   tendina.innerHTML = "";
   cart.forEach((item, index) => {
