@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.quote {
+  width: 100px;
+  padding: 8px 16px;
+  padding: 8px 16px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  border: 1px solid black;
+  display: flex;
+
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+
+  background-color: aquamarine;
+}
+.quote p {
+  color: black;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.quote p::before {
+  content: "Last Name : ";
+  font-style: italic;
+  border: 1px solid black;
+}
+
+.quote h3::before {
+  content: "First Name :";
+  font-style: italic;
+  border: 1px solid black;
+}
+
+.quote h2::before {
+  content: "Age : ";
+}
+
+.quote h5::before {
+  content: " id : ";
+}
