@@ -18,7 +18,7 @@ const quoteCard = (data) => {
 
 const bodyEl = document.body;
 const searchInputEl = document.createElement("input");
-let searchedValue = "";
+// let searchedValue = "";
 
 bodyEl.appendChild(searchInputEl);
 
@@ -40,4 +40,4 @@ for (let i = 1; i <= 30; i++) {
     .then((quote) => bodyEl.appendChild(quoteCard(quote)));
 }
 
-searchInputEl.addEventListener("input", (e) => searchedValue(e.target.value));
+searchInputEl.addEventListener("input", (e) => console.log(e.target.value));
