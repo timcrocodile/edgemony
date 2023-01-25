@@ -1,0 +1,15 @@
+.puntibarra {
+  position: relative;
+  border: 2px solid;
+  height: 250px;
+  width: 50px;
+}
+
+.puntibarra_status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  height: 100px;
+}

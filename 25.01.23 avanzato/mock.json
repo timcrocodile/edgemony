@@ -1,0 +1,14 @@
+{
+  "classifica": [
+    { "id": 1, "squadra": "napoli", "punti": 80 },
+    {
+      "id": 2,
+      "squadra": "juventus",
+      "punti": 50
+    },
+    { "id": 3, "squadra": "inter", "punti": 45 },
+    { "id": 4, "squadra": "sampdoria", "punti": 15 },
+    { "id": 5, "squadra": "sassuolo", "punti": 20 },
+    { "id": 6, "squadra": "roma", "punti": 66 }
+  ]
+}
