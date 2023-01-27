@@ -1,0 +1,51 @@
+.sopra {
+  border: 1px solid black;
+  height: 50px;
+  width: 98%;
+  position: fixed;
+  top: 10px;
+  border-radius: 30px;
+  left: 10px;
+  background-color: bisque;
+}
+
+.sotto {
+  border-radius: 30px;
+  border: 1px solid black;
+  height: 50px;
+  width: 98%;
+  position: fixed;
+  bottom: 10px;
+
+  left: 10px;
+  background-color: bisque;
+}
+
+.serietv {
+  /* display: grid;
+  gap: 10px;
+  padding: 14px;
+  overflow-x: auto;
+   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px;
+  padding: 14px;
+  /* overflow-x: auto; */
+  gap: 10px;
+}
+
+.serie {
+  margin: 10px 4%;
+}
+
+.serietv ::before {
+  content: "serie tv";
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+  font-family: fantasy;
+  background-color: aquamarine;
+}
