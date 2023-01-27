@@ -1,39 +1,38 @@
 .sopra {
-  border: 1px solid black;
-  height: 50px;
-  width: 98%;
-  position: fixed;
-  top: 10px;
-  border-radius: 30px;
-  left: 10px;
-  background-color: bisque;
+  display: flex;
+  padding-left: 300px;
+
+  align-items: center;
+  background-color: #282828;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.best {
+  background-color: red;
+  color: #282828;
 }
 
 .sotto {
+  padding-left: 100px;
   border-radius: 30px;
   border: 1px solid black;
   height: 50px;
   width: 98%;
   position: fixed;
   bottom: 10px;
-
+  color: RED;
   left: 10px;
-  background-color: bisque;
+  background-color: #282828;
 }
 
 .serietv {
-  /* display: grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
   gap: 10px;
+  margin: 50px auto;
   padding: 14px;
-  overflow-x: auto;
-   */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 200px;
-  padding: 14px;
-  /* overflow-x: auto; */
-  gap: 10px;
 }
 
 .serie {
