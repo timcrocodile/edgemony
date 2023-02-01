@@ -1,15 +1,3 @@
-// const net = require("net");
-// const HOSTNAME = "localhost";
-// const PORT = 3001;
-// net
-//   .createServer((socket) => {
-//     console.log(`Server connesso alla porta ${PORT}`);
-//     socket.on("data", (name) => {
-//       socket.write(`Ciao ${name}!`);
-//     });
-//   })
-//   .listen(PORT, HOSTNAME);
-
 const http = require("http");
 const os = require("os");
 let utente = os.userInfo();
@@ -78,32 +66,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-// const server = http.createServer((req, res) => {
-//   if (req.url === "/articoli") {
-//     res.writeHead(200, { "Content-Type": "text/plain" });
-//     res.end(articoli);
-//   } else if (req.url === "/commenti") {
-//     res.writeHead(200, { "Content-Type": "text/plain" });
-//     res.end(commenti);
-//   } else if (req.url === "/utenti") {
-//     res.writeHead(200, { "Content-Type": "text/plain" });
-//     res.end(utenti);
-//   } else {
-//     res.writeHead(404, { "Content-Type": "text/plain" });
-//     res.end("Pagina non trovata");
-//   }
-// });
-
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
-
-// const pages = {                           da riga 19 a 23
-//     "/articles": "Articles Page",
-//     "/comments": "Comments Page",
-//     "/users": "Users Page",
-//   };
-
-//   console.log(`Server conessso alla porta ${PORT}`); riga 50
-// server.listen(3001); riga 59
-// console.log(messaggio);
