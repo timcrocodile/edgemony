@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(15, 158, 165);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.menu button {
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #0072c6;
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.menu button a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu button:hover {
+  cursor: pointer;
+}
+
+.description {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+}
+
+.description h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.description p {
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: fantasy;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  animation: rotation 1s ease-in-out infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.image:hover {
+  animation-iteration-count: 1;
+}
+
+.home-button {
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
