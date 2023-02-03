@@ -5,18 +5,18 @@ const path = require("path");
 const app = express();
 
 const PORT = 8099;
-app.use(express.static("public"));
+app.use(express.static("assets"));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "public/index.html");
+  res.sendFile(__dirname + "assets/index.html");
 });
 
 app.get("/ami", (req, res) => {
-  res.sendFile(__dirname + "/public/ami.html");
+  res.sendFile(__dirname + "/assets/ami.html");
 });
 
 app.get("/esche", (req, res) => {
-  res.sendFile(__dirname + "/public/esche.html");
+  res.sendFile(__dirname + "/assets/esche.html");
 });
 
 app.get("*", (req, res) => {
