@@ -7,6 +7,27 @@
     <title>tutti i libri!</title>
   </head>
   <body>
-    <p>tutti i libri</p>
+    <h1>Lista dei libri</h1>
+    <div id="lista-libri"></div>
+    <script>
+      fetch("lista.json")
+        .then((response) => response.json())
+        .then((libri) => {
+          const listaLibri = document.querySelector("#lista-libri");
+
+          libri.forEach((libro) => {
+            const divLibro = document.createElement("div");
+            const titolo = document.createElement("h2");
+            const prezzo = document.createElement("p");
+
+            titolo.textContent = libro.titolo;
+            prezzo.textContent = "Prezzo: " + libro.prezzo + "€";
+
+            divLibro.appendChild(titolo);
+            divLibro.appendChild(prezzo);
+            listaLibri.appendChild(divLibro);
+          });
+        });
+    </script>
   </body>
 </html>
