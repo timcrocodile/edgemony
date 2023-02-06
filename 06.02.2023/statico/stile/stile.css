@@ -1,0 +1,46 @@
+.a {
+  margin-top: 20px;
+  border: 1px solid black;
+  height: 40px;
+  width: 970px;
+  margin-left: 20px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.a .b {
+  border: 1px solid black;
+  height: 38px;
+  width: 50px;
+}
+
+.a .c {
+  border: 1px solid black;
+  height: 38px;
+  width: 900px;
+}
+
+.d {
+  padding: 7px;
+  margin-top: 20px;
+  border: 1px solid black;
+  height: 40px;
+  width: 970px;
+  margin-left: 20px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.d .e {
+  border: 1px solid black;
+  height: 38px;
+  width: 50px;
+}
+
+.d .f {
+  border: 1px solid black;
+  height: 38px;
+  width: 900px;
+}
