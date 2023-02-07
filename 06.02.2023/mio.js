@@ -23,19 +23,6 @@ app.get("/api", (req, res) => {
   res.sendFile(__dirname + "/lista.json");
 });
 
-// app.get("/json", autorizza, (req, res) => {
-//   res.sendFile(__dirname + "/statico/lista.json");
-//   console.log(req.user);
-// });
-
-// app.get("/api/products", (req, res) => {
-//   const newProduct = products.map((product) => {
-//     const { id, title, brand } = product;
-//     return { id, title, brand };
-//   });
-//   res.json(newProduct);
-// });
-
 const libriprotetti = libri.slice(0, 2);
 
 app.get("/libriprotetti", autorizza, (req, res) => {
