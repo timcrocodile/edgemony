@@ -14,7 +14,7 @@ app.get("/api/todos", (req, res) => {
   res.status(200).json({ success: true, data: todos });
 });
 
-//post
+//post semplice
 app.post("/api/todos", (req, res) => {
   const { id, title } = req.body;
   if (!id || !title) {
@@ -26,7 +26,7 @@ app.post("/api/todos", (req, res) => {
   });
 });
 
-//post totale
+//post totale, andando a mostrare tutta la lista
 app.post("/api/todos/new", (req, res) => {
   const { id, title } = req.body;
   if (!id || !title) {
@@ -79,7 +79,7 @@ app.delete("/api/todos/:id", (req, res) => {
   return res.status(200).json({ success: true, data: newLatinQuote });
 });
 
-//login
+//login con chiamata positiva e 400
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
