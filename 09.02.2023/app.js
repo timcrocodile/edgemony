@@ -8,6 +8,9 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 app.use(express.static("public"));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.render("home", {
     name: "simona",
@@ -41,18 +44,21 @@ app.get("/login", (req, res) => {
 //   res.status(400).send("per favore aggiungi il dato");
 // });
 
-// app.post("/login", (req, res) => {
-//   const username = req.body.username;
-//   res.render("login", { username });
-// });
-
-app.post("/entra", (req, res) => {
-  const { username } = req.body;
-  if (username) {
-    return res.status(200).res.render("login", { username });
-  }
-  res.status(400).send("per favore aggiungi il dato");
+app.post("/login", (req, res) => {
+  const username = req.body.username;
+  res.render("entra", { username });
 });
+app.get("/entra", (req, res) => {
+  res.render("entra");
+});
+
+// app.post("/login", (req, res) => {
+//   const { username } = req.body;
+//   if (username) {
+//     return res.status(200).res.render("login", { username });
+//   }
+//   res.status(400).send("per favore aggiungi il dato");
+// });
 
 app.listen(PORT, () => {
   console.log(`server attivo si ${PORT}`);
