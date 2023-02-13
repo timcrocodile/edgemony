@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <!--Se uso il formato ico uso questo codice-->
+    <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico">-->
+
+    <title>Formazione</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-success px-5">
+
+                <a class="navbar-brand" href="#"><img src="images/logo_mini-tra.png" id="img-logo" class="img-fluid"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuToggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!--<span class="navbar-toggler-icon"></span>-->
+                    <span><i class="bi bi-caret-down-square-fill"></i></span>
+                  </button>
+
+                <div class="collapse navbar-collapse" id="menuToggle">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house-fill"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">Chi sono</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Servizi
+                            </a>
+                            <!--Tag <ul> innestato in altro tag <ul> generale. Così si crea la struttura del sottomenu-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
+                                <li><a class="dropdown-item" href="formazione.html">Formazione</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contatti.html">Contatti</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!--Aggiunta di un menu toggle-->
+                <div class="dropdown">
+                    <i class="bi bi-person-circle" data-bs-toggle="dropdown"></i>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profilo</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+        <!--<div id="img-cover">
+            <img src="images/4.jpg" class="img-fluid" alt="">
+        </div>-->
+
+        <!-- Immagine in background con testo sovrascritto-->
+        <div id="img-cover-contatti" class="d-flex justify-content-center align-items-center">
+            <div id="text-cover">
+                <h2>CHI SONO</h2>
+                <p class="lead text-center">Corsi</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!--BREADCRUMB-->
+        <div class="mt-3">
+            <nav aria-label="breadcrumb" id="bc-box">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Chi sono</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!--TITOLO DEL CONTENUTO-->
+        <div class="d-flex justify-content-center">
+            <h1 class="display-2 my-5">About me</h1>
+        </div>
+
+        <!-- PARALLAX CON BS-->
+
+        <div class="parallax-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#">
+                        <img src="images/avatar.svg" width="180" class="d-block mx-auto">
+                    </a>
+                    <h3 class="text-center text-light">Free lance</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row content w-75 mx-auto">
+                <div class="col-md-6 left">
+                    <h1 class="primary-color">Parallax in BS</h1>
+                    <p class="text-justify">Lorem ipsum dolor sit amet odio laoreet nullam consequat in proin porttitor ultrices. Mi hendrerit elementum et aliquam odio congue at senectus. Volutpat vestibulum velit orci malesuada sapien pellentesque posuere porta facilisi faucibus
+                        id dictumst aenean bibendum. Eros feugiat ac ornare pretium dolore sagittis tristique incididunt nisl do incididunt nisl. Incididunt mattis facilisis pharetra lobortis volutpat fermentum posuere fringilla ut consectetur dapibus
+                        pharetra magna aliquam.</p>
+
+                </div>
+
+                <div class="col-md-6 right">
+                    <img src="images/card1.jpg" class="w-100">
+                </div>
+                <div class="col-12 bottom">
+                    <p class="text-justify">Lorem ipsum dolor sit amet lacus ut morbi integer sapien. Sollicitudin cursus mauris velit turpis aliquam urna a velit. Morbi posuere vulputate non molestie mollis augue mi. Turpis eu semper lectus semper eros rhoncus eget viverra
+                        et tincidunt.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--Chiusura div container-->
+
+    <footer class="bg-success py-3 mt-auto">
+
+        <div class="row">
+            <div class="col-md-5 col-sm-4"></div>
+
+            <div class="col-md-2 col-md-4 extra-small">
+                <!--Uso il codice html per creare simbolo copy-->
+                <p class="text-white mb-3" id="cl-after"><em>Copyright&copy;</em></p>
+                <p class="text-white mb-5"><i class="bi bi-envelope"></i>mail@mail.it</p>
+                <p class="text-white mb-5"><i class="bi bi-telephone"></i>2345678</p>
+            </div>
+
+            <div class="col-md-5 col-sm-4"></div>
+
+        </div>
+    </footer>
+
+    <!-- Bottone back to top-->
+
+    <button type="button" class="btn btn-primary btn-lg" id="btn-back-to-top">
+        <i class="bi bi-arrow-up-square-fill"></i>
+    </button>
+
+    <!--SCRIPT JAVASCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/back-to-top.js"></script>
+    <!--implemento il tooltip-->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="demo"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+
+
+</body>
+
+</html>
