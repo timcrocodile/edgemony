@@ -7,7 +7,7 @@ const app = express();
 const PORT = 4088;
 
 app.set("view engine", "hbs");
-hbs.registerPartials(__dirname + "/view/partials");
+hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({ secret: "la mia sessione" }));
@@ -57,7 +57,7 @@ app.get("/warning", (req, res) => {
 app.get("/logout", (req, res) => {
   console.log("hai fatto logout");
   req.session = null;
-  res.redirect("/signup");
+  res.redirect("/");
 });
 
 app.get("/", (req, res) => {
