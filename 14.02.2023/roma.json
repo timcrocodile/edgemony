@@ -1,0 +1,29 @@
+{
+  "roma": [
+    {
+      "giocatore": "totti",
+      "ruolo": "fantasista",
+      "anno": 2001
+    },
+    {
+      "giocatore": "dybala",
+      "ruolo": "fantasista",
+      "anno": 2022
+    },
+    {
+      "giocatore": "cafu",
+      "ruolo": "terzino",
+      "anno": 2022
+    },
+    {
+      "giocatore": "candela",
+      "ruolo": "terzino",
+      "anno": 2001
+    },
+    {
+      "giocatore": "mancini",
+      "ruolo": "ala",
+      "anno": 2006
+    }
+  ]
+}
