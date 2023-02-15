@@ -1,0 +1,54 @@
+use giocatoristorici
+db.createCollection("roma")
+
+
+db.roma.insertMany([
+    {
+      "giocatore": "totti",
+      "ruolo": "fantasista",
+      "anno": 2001
+    },
+    {
+      "giocatore": "dybala",
+      "ruolo": "fantasista",
+      "anno": 2022
+    },
+    {
+      "giocatore": "cafu",
+      "ruolo": "terzino",
+      "anno": 2022
+    },
+    {
+      "giocatore": "candela",
+      "ruolo": "terzino",
+      "anno": 2001
+    },
+    {
+      "giocatore": "mancini",
+      "ruolo": "ala",
+      "anno": 2006
+    }
+])
+
+//inserisci 1 solo record
+db.roma.insertOne({"giocatore": "alenichev",
+      "ruolo": "centrocampista",
+      "anno": 1998 })
+
+
+
+
+db.roma.find().sort({anno:1}) 
+
+db.roma.countDocuments()
+
+db.roma.find({ruolo: 'fantasista'}).itcount()
+
+db.roma.find({ruolo: 'fantasista'}, {anno:2022})
+
+
+db.roma.updateOne({ giocatore: 'alenichev' },
+{
+  $set: {
+    anno:1999
+  })
