@@ -36,6 +36,19 @@ async function main() {
       { name: "storia", facoltà: "legge" },
       { name: "arte", facoltà: "bellearti" },
     ];
+
+    //per cancellare un elemento
+    // const deleteResult = await collectionCourses.deleteOne({ facoltà: "bellearti" });
+    // console.log(`Deleted documents =>`, deleteResult);
+
+    //per modificare un alemento
+    // const collectionCourses = db.collection("courses");
+    // const updateResult = await collectionCourses.updateMany(
+    //   { facoltà: "bellearti" },
+    //   { $set: { facoltà: "cucina" } }
+    // );
+    // console.log(`Updated documents in "courses" =>`, updateResult.modifiedCount);
+
     await collectionCourses.insertMany(docsCourses);
     console.log(`Documents inserted successfully in "courses"`);
   } catch (err) {
@@ -46,3 +59,23 @@ async function main() {
 }
 
 main();
+
+//per trovare tutti gli elemeti di courses
+// async function main() {
+//     try {
+//       await client.connect();
+//       console.log("Connected successfully to server");
+
+//       const db = client.db("school");
+//       const collection = db.collection("courses");
+
+//       const courses = await collection.find().toArray();
+//       console.log("All courses:", courses);
+//     } catch (err) {
+//       console.error(err);
+//     } finally {
+//       await client.close();
+//     }
+//   }
+
+//   main();
