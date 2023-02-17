@@ -1,15 +1,16 @@
 const express = require("express");
-let router = express.Router();
+// let router = express.Router();
+let routerfans = express.Router();
 const mongoose = require("mongoose");
 const Nota = mongoose.model("basketteams");
 
-router.get("/fans", (req, res) => {
+routerfans.get("/CIAO", (req, res) => {
   res.render("fans", {
     viewTitle: "squadre di basket fans",
   });
 });
 
-router.post("/fans", (req, res) => {
+routerfans.post("/", (req, res) => {
   if (req.body._id == "") insertRecord(req, res);
   else updateRecord(req, res);
 });
@@ -38,7 +39,7 @@ function updateRecord(req, res) {
   });
 }
 
-router.get("/fanslist", (req, res) => {
+routerfans.get("/fanslist", (req, res) => {
   Nota.find((err, docs) => {
     if (!err) {
       res.render("fanslist", {
@@ -50,7 +51,7 @@ router.get("/fanslist", (req, res) => {
   });
 });
 
-router.get("/fans:id", (req, res) => {
+routerfans.get("/:id", (req, res) => {
   Nota.findById(req.params.id, (err, doc) => {
     if (!err) {
       res.render("fans", {
@@ -61,7 +62,7 @@ router.get("/fans:id", (req, res) => {
   });
 });
 
-router.get("fans/delete/:id", (req, res) => {
+routerfans.get("/delete/:id", (req, res) => {
   Nota.findByIdAndRemove(req.params.id, (err, doc) => {
     if (!err) {
       res.redirect("/fanslist");
@@ -71,4 +72,4 @@ router.get("fans/delete/:id", (req, res) => {
   });
 });
 
-module.exports = router;
+module.exports = routerfans;

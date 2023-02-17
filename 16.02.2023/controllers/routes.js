@@ -19,9 +19,9 @@ function insertRecord(req, res) {
   nota.team = req.body.team;
   nota.city = req.body.city;
   nota.supporters = req.body.supporters;
-  //   nota.mobile = req.body.mobile;
-  //   nota.address = req.body.address;
-  //   nota.text = req.body.text;
+  // nota.mobile = req.body.mobile;
+  // nota.address = req.body.address;
+  // nota.text = req.body.text;
   nota.save((err, doc) => {
     if (!err) res.redirect("list");
     else console.log(`Errore nell' inserimento: ${err}`);
