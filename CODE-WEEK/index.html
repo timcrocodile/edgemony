@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./app.js" type="module"></script>
+
+    <title>MedicAppointment</title>
+  </head>
+  <body>
+    <section class="titolo" id="titolo">
+      <h1 class="tit1">Medical Appointments</h1>
+    </section>
+    <button class="darkbtn" onclick="myFunction()">NerdMode\{}</button>
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+
+    <h3 class="fancy">Today's Appointments</h3>
+    <section class="oggis" id="oggis"></section>
+    <div>
+      <label for="id"
+        >enter the id of the appointment you want to cancel:</label
+      >
+      <input type="text" id="id-input" placeholder="****" />
+      <button id="delete-button" class="delete">
+        refresh today's appointments
+      </button>
+    </div>
+    <h3 class="fancy2">Future Appointments</h3>
+    <section class="futuro" id="futuro"></section>
+    <div>
+      <label for="idfut"
+        >enter the id of the future appointment you want to cancel:</label
+      >
+      <input type="text" id="id-inputfut" placeholder="****" />
+      <button id="delete-buttonfut" class="delete">
+        refresh future appointments
+      </button>
+    </div>
+    <h3 class="fancy3">Past Appointments</h3>
+    <section class="passato" id="passato"></section>
+  </body>
+</html>
