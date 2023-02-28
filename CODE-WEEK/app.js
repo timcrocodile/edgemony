@@ -7,19 +7,6 @@ const qS = (element) => document.querySelector(element);
 
 //map per aggiungere priorità,data ed orario
 
-function randomDate(start, end) {
-  return new Date(
-    start.getTime() + Math.random() * (end.getTime() - start.getTime())
-  );
-}
-
-function randomDate2(start, end, startHour, endHour) {
-  var date = new Date(+start + Math.random() * (end - start));
-  var hour = (startHour + Math.random() * (endHour - startHour)) | 0;
-  date.setHours(hour);
-  return date;
-}
-
 function random_item(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
@@ -31,6 +18,8 @@ const updatedArray = myJson.map((element) => ({
   Date: random_item(myDate),
   Ora: random_item(myOra),
 }));
+
+console.log(random_item(myDate));
 
 //per adattare al formato DD.MM.YYYY
 const oggi = new Date()
