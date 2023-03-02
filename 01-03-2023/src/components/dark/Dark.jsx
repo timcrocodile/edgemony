@@ -3,9 +3,8 @@ import "./index.css";
 
 const Dark = ({ text }) => {
   const hello = () => {
-    // alert(`Il numero di prodotti corrisponde a: ${darkmode}`);
     var element = document.body;
-    element.classList.toggle("dark-mode");
+    element.classList.toggle("dark-modality");
   };
   return (
     <div className="dark">
@@ -16,8 +15,3 @@ const Dark = ({ text }) => {
 };
 
 export default Dark;
-
-// function myFunction() {
-//   var element = document.body;
-//   element.classList.toggle("dark-mode");
-// }
