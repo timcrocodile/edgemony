@@ -17,3 +17,25 @@
   border-radius: 100%;
   cursor: pointer;
 }
+
+.cane {
+  width: 300px;
+  height: 450px;
+  padding: 15px;
+}
+
+.breeds {
+  /* border: 1px solid black; */
+  align-items: flex-start;
+}
+
+.buttons {
+  padding: 3px;
+  padding-left: 25px;
+}
+
+.buttons :hover {
+  transition: 0.5s all;
+  scale: 1.8;
+  cursor: pointer;
+}

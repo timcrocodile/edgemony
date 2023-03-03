@@ -3,10 +3,10 @@ import "./index.css";
 import Listaprodotti2 from "../listaprodotti2/Listaprodotti2";
 
 const Gallery = ({ listData, titolo }) => {
-  const [name, setName] = useState(1);
-  const handleClick = () => {
-    setName(2);
-  };
+  // const [name, setName] = useState(1);
+  // const handleClick = () => {
+  //   setName(2);
+  // };
   const [count, setCount] = useState(4);
   function decrementCount() {
     setCount((prevCount) => prevCount - 1);
@@ -16,7 +16,7 @@ const Gallery = ({ listData, titolo }) => {
   }
   return (
     <div className="nuovagalleria">
-      <button onClick={handleClick}> cambia</button>
+      {/* <button onClick={handleClick}> cambia</button> */}
 
       <p className="ciao">{titolo}</p>
       <button onClick={decrementCount}>-</button>
@@ -24,11 +24,12 @@ const Gallery = ({ listData, titolo }) => {
       <button onClick={incrementCount}>+</button>
       {listData.map((product) => (
         <Listaprodotti2
-          const
+          // const
           numerello={count}
           // numerello={name}
+
           productData={product.image}
-          key={product.key}
+          key={product.id}
         />
       ))}
     </div>
