@@ -4,14 +4,38 @@ import { useState } from "react";
 const Form = () => {
   const [newTodo, setNewTodo] = useState("");
 
+  //per rimpiazzare il metodo push per aggiungere il nuovo item, vado a crearmi uno stato che
+  //richiama la todoList come stato di base e che quando viene richiamata aggiunge l'oggetto
+  const [todos, setTodos] = useState(todoList);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newId = todoList.length + 1;
+
+    //questa riga di codice la commento poichè devo sostituire il riferimento di partenza per il
+    //conteggio , altrimenti funzionerebbe solo con l'aggiunta del primo elemnto (poi non aggiungiù più id)
+    //perchè non riconosce todos
+    // const newId = todoList.length +1
+    const newId = todos.length + 1;
     const newTodoItem = { id: newId, todo: newTodo };
     console.log(newTodoItem);
     //con questo controllo riesco a capire che il cambio di stato vale anche se non c'è nessun input
-    todoList.push(newTodoItem);
-    setNewTodo("");
+    // todoList.push(newTodoItem);
+    setTodos((prev) => [...prev, newTodoItem]);
+    // setNewTodo("");
+  };
+
+  const handleCancellami = (id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+  };
+
+  const handleItemClick = (id) => {
+    handleCancellami(id);
+  };
+
+  const handleSort = () => {
+    setTodos((prevTodos) =>
+      [...prevTodos].sort((a, b) => a.todo.localeCompare(b.todo))
+    );
   };
 
   const handleChange = (event) => {
@@ -41,11 +65,18 @@ const Form = () => {
         />
         <button type="submit">Add Todo</button>
       </form>
-      {todoList.map((todo) => (
-        <div key={todo.id}>{todo.todo}</div>
+      <button onClick={handleSort}>Sort Alphabetically</button>
+      {todos.map((todo) => (
+        <div key={todo.id} onClick={() => handleItemClick(todo.id)}>
+          {todo.todo}
+
+          <button onClick={() => handleCancellami(todo.id)}>Delete</button>
+        </div>
       ))}
     </div>
   );
 };
 
 export default Form;
+
+//  {todoList.map((todo) => (
