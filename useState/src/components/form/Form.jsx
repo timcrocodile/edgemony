@@ -54,10 +54,11 @@ const Form = () => {
     //   ))}
     // </div>
     //qui invece per andare a creare il form e poi postare i nuovo dati
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="component">
+      <form className="form" onSubmit={handleSubmit}>
         <label>New Todo:</label>
         <input
+          placeholder="scrivi qui la tua todo"
           id="newTodo"
           type="text"
           value={newTodo}
@@ -65,9 +66,15 @@ const Form = () => {
         />
         <button type="submit">Add Todo</button>
       </form>
-      <button onClick={handleSort}>Sort Alphabetically</button>
+      <button onClick={handleSort} className="sort">
+        Sort Alphabetically
+      </button>
       {todos.map((todo) => (
-        <div key={todo.id} onClick={() => handleItemClick(todo.id)}>
+        <div
+          className="todo"
+          key={todo.id}
+          onClick={() => handleItemClick(todo.id)}
+        >
           {todo.todo}
 
           <button onClick={() => handleCancellami(todo.id)}>Delete</button>
