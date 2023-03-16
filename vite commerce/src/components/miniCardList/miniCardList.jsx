@@ -9,7 +9,7 @@ const MiniCardList = ({ title, endpoint }) => {
 
   useEffect(() => {
     GET(endpoint).then((data) => setMiniCards(() => data.products));
-  }, []);
+  }, [endpoint]);
 
   return (
     <div className="miniCardList">

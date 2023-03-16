@@ -36,3 +36,11 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
   outline: none;
 }
+
+.Navbar__cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 2rem;
+}

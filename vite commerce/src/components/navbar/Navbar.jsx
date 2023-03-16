@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 
-const Navbar = ({ searchValue }) => {
+const Navbar = ({ cartListLength, searchValue }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onHandleInput = (e) => setInputValue(() => e.target.value);
@@ -28,6 +28,9 @@ const Navbar = ({ searchValue }) => {
           required
         />
       </form>
+      <div className="Navbar__cart">
+        <p>{cartListLength} 🛒</p>
+      </div>
     </div>
   );
 };
