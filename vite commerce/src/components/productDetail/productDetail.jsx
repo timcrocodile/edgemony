@@ -7,7 +7,7 @@ const GalleryModal = ({ imgUrl, imgAlt, setGalleryVisible }) => {
   );
 };
 
-const ProductDetail = ({ productData, setModalContext, setCardList }) => {
+const ProductDetail = ({ productData, setModalContext, setCartList }) => {
   const [isGalleryVisible, setGalleryVisible] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState("");
 
@@ -17,19 +17,15 @@ const ProductDetail = ({ productData, setModalContext, setCardList }) => {
       isVisibile: false,
     }));
 
-  // const onHandleAddCart = () => {
-  //   const localStorageCartItems =
-  //     JSON.parse(localStorage.getItem("cartList")) || [];
-
-  //   setCardList((prev) => [...prev, productData]);
-  //   localStorage.setItem(
-  //     "cartList",
-  //     JSON.stringify([...localStorageCartItems, productData])
-  //   );
-  // };
-
   const onHandleAddCart = () => {
-    setCardList((prev) => [...prev, productData]);
+    const localStorageCartItems =
+      JSON.parse(localStorage.getItem("cartList")) || [];
+
+    setCartList((prev) => [...prev, productData]);
+    localStorage.setItem(
+      "cartList",
+      JSON.stringify([...localStorageCartItems, productData])
+    );
   };
 
   const onHandleImageClick = (imgUrl) => {

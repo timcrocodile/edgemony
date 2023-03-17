@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./index.css";
 
-const Navbar = ({ cartListLength, searchValue }) => {
+const Navbar = ({ cartListLength, searchValue, setModalCartVisibility }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onHandleInput = (e) => setInputValue(() => e.target.value);
+
+  const onHandleCartClick = () => {
+    setModalCartVisibility((prev) => !prev);
+  };
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +33,9 @@ const Navbar = ({ cartListLength, searchValue }) => {
         />
       </form>
       <div className="Navbar__cart">
-        <p>{cartListLength} 🛒</p>
+        <p onClick={onHandleCartClick} className="iconacarr">
+          {cartListLength} 🛒
+        </p>
       </div>
     </div>
   );

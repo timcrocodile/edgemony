@@ -1,6 +1,7 @@
 import CardList from "./components/cardList";
 import Hero from "./components/hero";
 import Footer from "./components/footer/Footer";
+import Cart from "./components/cart";
 
 import Navbar from "./components/navbar";
 import { useState } from "react";
@@ -10,7 +11,12 @@ import ProductDetail from "./components/productDetail";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
-  const [cartList, setCardList] = useState([]);
+  // const [cartList, setCardList] = useState([]);
+  const [cartList, setCartList] = useState(
+    JSON.parse(localStorage.getItem("cartList")) || []
+  );
+
+  const [modalCartVisibility, setModalCartVisibility] = useState(false);
 
   const [modalContext, setModalContext] = useState({
     productData: {},
@@ -24,7 +30,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar cartListLength={cartList.length} searchValue={handleSearch} />
+      <Navbar
+        cartListLength={cartList.length}
+        searchValue={handleSearch}
+        setModalCartVisibility={setModalCartVisibility}
+      />
       <div>{searchValue}</div>
       <Hero />
 
@@ -47,8 +57,15 @@ function App() {
       {modalContext.isVisibile && (
         <ProductDetail
           productData={modalContext.productData}
-          setCardList={setCardList}
+          setCartList={setCartList}
           setModalContext={setModalContext}
+        />
+      )}
+      {modalCartVisibility && (
+        <Cart
+          cartList={cartList}
+          setModalCartVisibility={setModalCartVisibility}
+          setCartList={setCartList}
         />
       )}
     </div>
