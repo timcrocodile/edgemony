@@ -11,3 +11,21 @@
   padding: 10px;
   overflow-x: scroll;
 }
+
+.buttonsproducts {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  background: url(https://images.unsplash.com/photo-1521459467264-802e2ef3141f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+
+.buttonsproducts button {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .buttonsproducts {
+    display: block;
+    margin-left: 2px;
+  }
+}

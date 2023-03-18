@@ -28,6 +28,26 @@ function App() {
     console.log(value);
   };
 
+  const buttonSearch = () => {
+    setSearchValue("/products/category/laptops");
+  };
+  const buttonSearch2 = () => {
+    setSearchValue("/products/category/skincare");
+  };
+  const buttonSearch3 = () => {
+    setSearchValue("/products/category/smartphones");
+  };
+  const buttonSearch4 = () => {
+    setSearchValue("/products/category/home-decoration");
+  };
+  const buttonSearch5 = () => {
+    setSearchValue("/products/category/groceries");
+  };
+
+  const buttonSearch6 = () => {
+    setSearchValue("/products/category/fragrances");
+  };
+
   return (
     <div className="App">
       <Navbar
@@ -35,11 +55,22 @@ function App() {
         searchValue={handleSearch}
         setModalCartVisibility={setModalCartVisibility}
       />
-      <div>{searchValue}</div>
+      {/* <div>{searchValue}</div> */}
+      <div className="buttonsproducts">
+        <button onClick={buttonSearch}>LAPTOPS</button>
+        <button onClick={buttonSearch2}>SKIN CARE</button>
+        <button onClick={buttonSearch3}>SMARTPHONES</button>
+        <button onClick={buttonSearch4}>HOME-DECORATION</button>
+        <button onClick={buttonSearch5}>GROCERIES</button>
+        <button onClick={buttonSearch6}>FRAGRANCIES</button>
+      </div>
       <Hero />
 
       {searchValue && (
-        <MiniCardList title="esercizio1" endpoint={searchValue} />
+        <MiniCardList
+          title="The products you were looking for!"
+          endpoint={searchValue}
+        />
       )}
 
       <CardList

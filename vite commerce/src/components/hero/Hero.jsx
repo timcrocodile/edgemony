@@ -5,12 +5,10 @@ const Hero = () => {
     <div className="Hero">
       <div className="Hero__text">
         <h1>Vite Commerce</h1>
-        <h3>Il miglior marketplace in Vite</h3>
+        <h3>everything you need!</h3>
       </div>
-      <img
-        src="https://cdn.pixabay.com/photo/2017/09/23/16/54/ludwigsburg-germany-2779468_640.jpg"
-        alt="hero image"
-      />
+
+      <img src="https://images.unsplash.com/photo-1541998916-822fe8274a99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
     </div>
   );
 };

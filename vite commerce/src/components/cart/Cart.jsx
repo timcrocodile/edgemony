@@ -21,6 +21,13 @@ const Cart = ({ cartList, setModalCartVisibility, setCartList }) => {
 
   return (
     <div className="Cart">
+      <div className="imagemarket">
+        <img
+          src="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+          alt="market"
+          className="imageimage"
+        />
+      </div>
       <p>Prodotti presenti nel carrello 🛒 :</p>
       {cartList.map((product) => (
         <div className="Cartproduct">

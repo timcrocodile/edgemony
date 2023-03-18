@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  /* background-color: #ff4e00; */
+  background-color: rgba(5, 247, 53, 0.7);
+  background-image: linear-gradient(315deg, #077bff 0%, #ff07e6 74%);
 }
 
 .Navbar ul {
@@ -47,4 +48,12 @@
 
 .iconacarr {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .Navbar__cart {
+    right: 5px;
+    top: -7px;
+    font-size: 1.2rem;
+  }
 }

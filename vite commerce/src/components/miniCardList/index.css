@@ -1,6 +1,8 @@
 .miniCardList {
+  background-color: aquamarine;
   display: flex;
   flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .miniCardList h2 {
