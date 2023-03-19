@@ -19,10 +19,29 @@ const Navbar = ({ cartListLength, searchValue, setModalCartVisibility }) => {
   return (
     <div className="Navbar">
       <ul>
-        <li>Home</li>
+        {/* <li>
+          <img
+            className="logo"
+            src="https://cdn-icons-png.flaticon.com/512/872/872228.png?w=740&t=st=1679230127~exp=1679230727~hmac=e53617751234733e609017925cbadf53ea1c10ee55694c721c58b385b27bf028"
+            alt="logo"
+          />
+        </li> */}
+        <li>
+          <img
+            src="https://cdn-static.dagospia.com/images/layout/home-dago.png"
+            alt=""
+          ></img>
+        </li>
         <li>Contacts</li>
         <li>About us</li>
+        <li>
+          <img
+            src="https://cdn-static.dagospia.com/images/layout/envelope-dago.png"
+            alt=""
+          ></img>
+        </li>
       </ul>
+
       <form onSubmit={onHandleSubmit}>
         <input
           value={inputValue}
@@ -37,6 +56,30 @@ const Navbar = ({ cartListLength, searchValue, setModalCartVisibility }) => {
           {cartListLength} 🛒
         </p>
       </div>
+      {/* <nav id="top-nav">
+        <ul>
+          <li>
+            <img
+              src="https://cdn-static.dagospia.com/images/layout/home-dago.png"
+              alt=""
+            ></img>
+          </li>
+          <li>Media e tv</li>
+          <li>Politica</li>
+          <li>Business</li>
+          <li>Cafonal</li>
+          <li>Cronache</li>
+          <li>Sport</li>
+          <li>Viaggi</li>
+          <li>Salute</li>
+          <li>
+            <img
+              src="https://cdn-static.dagospia.com/images/layout/envelope-dago.png"
+              alt=""
+            ></img>
+          </li>
+        </ul>
+      </nav> */}
     </div>
   );
 };
